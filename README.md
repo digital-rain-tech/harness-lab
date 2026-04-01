@@ -15,15 +15,24 @@ This project is not affiliated with, endorsed by, or maintained by Anthropic or 
 
 ## What's Here
 
-- `commands/` — CLI command implementations (~70+ commands)
-- `tools/` — Tool definitions and executors (~40+ tools)
-- `hooks/` — Pre/post tool use hooks
-- `plugins/` — Plugin system
-- `skills/` — Skill loading and bundled skills
-- `buddy/` — Companion sprite feature
-- `services/autoDream/` — Background memory consolidation
-- `tasks/DreamTask/` — Dream task implementation
-- Various utilities, components, and state management
+- `src/commands/` — CLI command implementations (~70+ commands)
+- `src/tools/` — Tool definitions and executors (~40+ tools)
+- `src/hooks/` — Pre/post tool use hooks
+- `src/plugins/` — Plugin system
+- `src/skills/` — Skill loading and bundled skills
+- `src/buddy/` — Companion sprite feature
+- `src/services/autoDream/` — Background memory consolidation
+- `src/tasks/DreamTask/` — Dream task implementation
+- `src/utils/` — Utility functions including messages.ts, messagePredicates.ts, messageQueueManager.ts
+- `src/constants/messages.ts` — Message constants
+- `src/components/messageActions.tsx` — Message action components
+- Various other utilities, components, and state management
+
+## Missing / Excluded Files
+
+The following files appear to be excluded from the leak (original TS source not present):
+- `types/message.ts` — Core message type definitions (imported by 184 files but not in source)
+- These are likely original TypeScript files that were filtered out
 
 ## Research Focus
 
